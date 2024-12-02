@@ -10,8 +10,12 @@ public class DBConnector {
 	
 	private static String user = "root"; 
 	private static String password = ""; 
+	
+//	１５、１６行目は公式として覚える
 	public Connection getConnection() { 
 	Connection con = null; 
+	
+//	ドライバーがロードされ使えるような状態にしている。２０，２１行目は覚える
 	try{ 
 	Class.forName(driverName); 
 	con = DriverManager.getConnection(url,user,password); 
